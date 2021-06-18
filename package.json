@@ -1,0 +1,41 @@
+{
+  "name": "halls-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development & nodemon -w src --exec \"babel-node src --presets env\"",
+    "debug": "NODE_ENV=development & nodemon --inspect src --exec \"babel-node src --presets env\"",
+    "build": "babel src -s -D -d dist --presets env",
+    "start": "pm2 start dist/index.js",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-json-validator-middleware": "^1.2.1",
+    "express-validator": "^5.0.1",
+    "helmet": "^3.10.0",
+    "lodash": "^4.17.5",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.0.3",
+    "mongoose-auto-increment": "^5.0.1",
+    "nodemon": "^1.17.3",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.17.0",
+    "eslint-config-fbjs": "^2.0.1"
+  },
+  "description": ""
+}
